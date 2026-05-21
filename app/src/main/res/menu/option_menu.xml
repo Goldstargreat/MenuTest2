@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_yellow"
+        android:title="배경색(노랑)" />
+
+    <item
+        android:id="@+id/item_khaki"
+        android:title="배경색(카키)" />
+
+    <item
+        android:id="@+id/item_blue"
+        android:title="배경색(청색)" />
+
+    <item android:title="버튼 변경::">
+        <menu>
+            <item
+                android:id="@+id/btn_rotate"
+                android:title="버튼 45도 회전" />
+            <item
+                android:id="@+id/btn_zoomin"
+                android:title="버튼 2배 확대" />
+            <item
+                android:id="@+id/btn_rotate_neg"
+                android:title="버튼 -45도 회전" />
+            <item
+                android:id="@+id/btn_zoomin_y"
+                android:title="버튼 2배 확대(Y)" />
+        </menu>
+    </item>
+
+    <!-- 그림 회전 메뉴 -->
+    <item
+        android:id="@+id/item_img_rotate"
+        android:title="그림 회전" />
+
+    <!-- 한라산/추자도/범섬 라디오버튼 그룹 -->
+    <group
+        android:id="@+id/group_island"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_hallasan"
+            android:title="한라산"
+            android:checked="true" />
+
+        <item
+            android:id="@+id/item_chujado"
+            android:title="추자도" />
+
+        <item
+            android:id="@+id/item_beomseom"
+            android:title="범섬" />
+
+    </group>
+
+</menu>
