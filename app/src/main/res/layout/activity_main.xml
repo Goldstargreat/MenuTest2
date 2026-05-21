@@ -24,13 +24,6 @@
         android:hint="회전 각도 입력"
         android:inputType="numberDecimal|numberSigned"
         android:layout_marginBottom="16dp" />
-    <!-- Button 추가 -->
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="옵션 메뉴를 통해 변경"
-        android:layout_marginBottom="16dp" />
 
     <!-- 이미지 표시 ImageView (기본 이미지: 한라산) -->
     <ImageView
