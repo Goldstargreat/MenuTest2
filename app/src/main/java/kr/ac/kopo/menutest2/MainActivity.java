@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,9 +19,6 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity
 {
     LinearLayout linear;
-    Button btn;
-    float rotationDegree = 0;
-
     EditText etDegree;      // 각도 입력 EditText
     ImageView imageView;    // 이미지 표시 ImageView
     float imgRotation = 0;  // 이미지 누적 회전 각도
@@ -40,7 +36,6 @@ public class MainActivity extends AppCompatActivity
         });
 
         linear = findViewById(R.id.main);
-        btn = findViewById(R.id.btn);
         etDegree = findViewById(R.id.et_degree);    // EditText 연결
         imageView = findViewById(R.id.imageView);   // ImageView 연결
     }
@@ -75,32 +70,6 @@ public class MainActivity extends AppCompatActivity
         else if (item.getItemId() == R.id.item_blue)
         {
             linear.setBackgroundColor(Color.BLUE);
-            return true;
-        }
-        // 버튼 +45도 회전
-        else if (item.getItemId() == R.id.btn_rotate)
-        {
-            rotationDegree = rotationDegree + 45;
-            btn.setRotation(rotationDegree);
-            return true;
-        }
-        // 버튼 X축 2배 확대
-        else if (item.getItemId() == R.id.btn_zoomin)
-        {
-            btn.setScaleX(2);
-            return true;
-        }
-        // 버튼 -45도 회전
-        else if (item.getItemId() == R.id.btn_rotate_neg)
-        {
-            rotationDegree = rotationDegree - 45;
-            btn.setRotation(rotationDegree);
-            return true;
-        }
-        // 버튼 Y축 2배 확대
-        else if (item.getItemId() == R.id.btn_zoomin_y)
-        {
-            btn.setScaleY(2);
             return true;
         }
         // 그림 회전: EditText 각도값 읽어서 ImageView 누적 회전
